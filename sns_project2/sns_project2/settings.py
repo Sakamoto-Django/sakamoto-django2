@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin', 
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     # 追加分
     'toppage.apps.ToppageConfig',
     'accounts.apps.AccountsConfig',
+    # for django-allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +129,26 @@ STATIC_URL = '/static/'
 
 # Accounts
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# setting SITE-ID for django-allauth
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend', # for normal customer
+    'django.contrib.auth.backends.ModelBackend', # for admin
+)
+
+# configuration for mail certification
+ACCOUNT_AUTHENTIC_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+# require mail certification for signup
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# webpage after login and logout
+LOGIN_REDIRECT_URL = 'toppage:index'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+# immidiate logout
+ACCOUNT_LOGOUT_ON_GET = True
