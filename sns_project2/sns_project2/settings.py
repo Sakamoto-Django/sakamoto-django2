@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 追加分
     'toppage.apps.ToppageConfig'
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
