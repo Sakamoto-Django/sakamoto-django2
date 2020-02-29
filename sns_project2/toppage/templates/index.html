@@ -1,27 +1,27 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Minimal - Bootstrap Template</title>
+  <title> Practice - Bootstrap Template</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|EB+Garamond" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
     Template Name: Minimal
@@ -57,7 +57,7 @@
   <div id="headerwrap">
     <div class="container">
       <div class="logo">
-        <img src="img/logo.png">
+        <img src="{% static 'img/logo.png' %}">
       </div>
       <br>
       <div class="row">
@@ -109,13 +109,13 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active centered">
-                <img class="img-responsive" src="img/c1.png" alt="">
+                <img class="img-responsive" src="{% static 'img/c1.png' %}" alt="">
               </div>
               <div class="item centered">
-                <img class="img-responsive" src="img/c2.png" alt="">
+                <img class="img-responsive" src="{% static 'img/c2.png' %}" alt="">
               </div>
               <div class="item centered">
-                <img class="img-responsive" src="img/c3.png" alt="">
+                <img class="img-responsive" src="{% static 'img/c3.png' %}" alt="">
               </div>
             </div>
             <br>
@@ -208,13 +208,13 @@
   </div>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'vendor/php-mail-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/easing/easing.min.js' %}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>

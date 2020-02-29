@@ -126,6 +126,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 上記以外のstaticを評価したい場合
+STATICFILES_DIRS =  [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # Accounts
 AUTH_USER_MODEL = 'accounts.CustomUser'
