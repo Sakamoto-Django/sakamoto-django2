@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 追加分
-    'toppage.apps.ToppageConfig'
+    'toppage.apps.ToppageConfig',
+    'accounts.apps.AccountsConfig',
+    # for django-allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +125,35 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 上記以外のstaticを評価したい場合
+STATICFILES_DIRS =  [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+
+# Accounts
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# setting SITE-ID for django-allauth
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend', # for normal customer
+    'django.contrib.auth.backends.ModelBackend', # for admin
+)
+
+# configuration for mail certification
+ACCOUNT_AUTHENTIC_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+# require mail certification for signup
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# webpage after login and logout
+LOGIN_REDIRECT_URL = 'toppage:index'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+# immidiate logout
+ACCOUNT_LOGOUT_ON_GET = True
