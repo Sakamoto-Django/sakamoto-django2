@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class DisscussionBoardConfig(AppConfig):
+class DiscussionBoardConfig(AppConfig):
     name = 'discussion_board'
