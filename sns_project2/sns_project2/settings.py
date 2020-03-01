@@ -152,7 +152,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # webpage after login and logout
-LOGIN_REDIRECT_URL = 'toppage:index'
+LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # immidiate logout
