@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class DisscussionBoardConfig(AppConfig):
-    name = 'disscussion_board'
+    name = 'discussion_board'
