@@ -14,3 +14,13 @@ class Create_account(CreateView):
             username=form.cleaned_data.get('usename')
             #read "password1" from form
             password1=form.cleaned_data.get('password1')
+            use=authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('/')
+        return render(request, 'create.html', {'form': form,})
+
+    def get(self, request, *args, **kwargs):
+        form = UserCreateForm(request.POST)
+        return  render(request, 'create.html', {'form': form,})
+
+create_account = Create_account.as_view()
