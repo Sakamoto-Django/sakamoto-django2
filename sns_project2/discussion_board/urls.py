@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'discussion_board'
 urlpatterns = [
-    path('', views.DiscussionBoardView.as_view(), name='index'),
+    path('', views.DiscussionBoardView, name='index'),
 ]

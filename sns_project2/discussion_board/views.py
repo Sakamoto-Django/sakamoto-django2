@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views import generic
+import datetime
 
 
-class DiscussionBoardView(generic.TemplateView):
-    template_name = 'discussion.html'
+def DiscussionBoardView(request):
+    return render(request, 'discussion.html')
