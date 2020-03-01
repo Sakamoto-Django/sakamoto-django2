@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
   <body>
-    <form method="POST" action="{% url 'create_account' %}">
+    <form method="POST" action="{% url 'accounts:create' %}">
       {% csrf_token %}
       <label>ユーザーID</label>
       {{ form.username }}
-      {{ form.username.errors }}
+      <!--{{ form.username.errors }}-->
       <label>パスワード</label>
       {{ form.password1 }}
       {{ form.password1.errors }}

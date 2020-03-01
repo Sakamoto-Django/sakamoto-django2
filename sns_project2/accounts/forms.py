@@ -8,6 +8,6 @@ class UserCreateForm(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
-    class Meta:
-       model = User
-       fields = ("username", "password1", "password2",)
+#    class Meta:
+#       model = User
+#       fields = ("username", "password1", "password2",)
