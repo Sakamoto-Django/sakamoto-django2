@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('toppage.urls')),
     path('accounts/', include('allauth.urls')),
+    path('discussion/', include('discussion_board.urls'))
 ]

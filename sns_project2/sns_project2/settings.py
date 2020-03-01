@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # 追加分
     'toppage.apps.ToppageConfig',
     'accounts.apps.AccountsConfig',
+    'discussion_board.apps.DisscussionBoardConfig',
     # for django-allauth
     'django.contrib.sites',
     'allauth',
